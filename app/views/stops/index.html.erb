@@ -1,0 +1,35 @@
+<h1>Listing stops</h1>
+
+<table>
+  <tr>
+    <th>Stop</th>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Northing</th>
+    <th>Easting</th>
+    <th>Fare zone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stops.each do |stop| %>
+  <tr>
+    <td><%= stop.stop_id %></td>
+    <td><%= stop.name %></td>
+    <td><%= stop.latitude %></td>
+    <td><%= stop.longitude %></td>
+    <td><%= stop.northing %></td>
+    <td><%= stop.easting %></td>
+    <td><%= stop.fare_zone %></td>
+    <td><%= link_to 'Show', stop %></td>
+    <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
+    <td><%= link_to 'Destroy', stop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stop', new_stop_path %>

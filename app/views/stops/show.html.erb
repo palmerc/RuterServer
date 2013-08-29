@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Stop:</b>
+  <%= @stop.stop_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @stop.name %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @stop.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @stop.longitude %>
+</p>
+
+<p>
+  <b>Northing:</b>
+  <%= @stop.northing %>
+</p>
+
+<p>
+  <b>Easting:</b>
+  <%= @stop.easting %>
+</p>
+
+<p>
+  <b>Fare zone:</b>
+  <%= @stop.fare_zone %>
+</p>
+
+
+<%= link_to 'Edit', edit_stop_path(@stop) %> |
+<%= link_to 'Back', stops_path %>

@@ -1,0 +1,12 @@
+require 'csv'
+require 'open-uri'
+
+open('http://193.69.180.119:8080/tabledump/stops2.csv') do |f|
+  puts f.readline()
+end
+
+
+#CSV.foreach(stops) do |row|
+#  print row
+#  Moulding.create!(row.to_hash.symbolize_keys)
+#end
